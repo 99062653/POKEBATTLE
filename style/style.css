@@ -29,12 +29,7 @@ body {
     border-radius: 15%;
 }
 
-#Choose {
-    top: 18.5vh;
-    width: 75vw;
-    height: 75vh;
-}
-
+#Choose,
 #New {
     top: 18.5vh;
     width: 75vw;
@@ -43,19 +38,25 @@ body {
 
 #BackButton {
     position: relative;
-    left: -40vw;
+    float: left;
+    margin-left: 25px;
     font-size: 25px;
 }
 
 #NewButton {
+    position: relative;
     float: right;
-    margin-right: 10px;
+    margin-right: 25px;
     font-size: 25px;
 }
 
 #Pokemons {
     display: grid;
-    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-columns: auto auto auto auto;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul {
@@ -68,23 +69,23 @@ header {
     border-bottom: 1.5px solid #c7a008;
 }
 
-header>span {
-    font-size: 25px;
+header>span, label, .urls, .Pokemon>h1 {
     color: #ffcb05;
     -webkit-text-stroke: 1px #2a75bb;
 }
 
+header>span {
+    position: relative;
+    font-size: 25px;
+}
+
 label {
-    color: #ffcb05;
-    -webkit-text-stroke: 1px #2a75bb;
     font-size: 17.5px;
 }
 
 .urls {
     text-decoration: none;
     font-size: 35px;
-    color: #ffcb05;
-    -webkit-text-stroke: 1px #2a75bb;
     cursor: pointer;
 }
 
@@ -104,13 +105,8 @@ label {
 
 .Pokemon>h1 {
     font-size: 25px;
-    color: #ffcb05;
-    -webkit-text-stroke: 1px #2a75bb;
 }
 
-.Fill-Pokemon {
-    display: block;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
+.Pokemon>ul>li {
+    color: #000000;
 }

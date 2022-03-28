@@ -16,24 +16,33 @@ require "code/services/indexservice.php";
 </head>
 <body>
     <div id="Main" style="background-image: url(<?= $randombg ?>);">
-        <?php if (isset($_GET["choosepokemon"])) { ?>
+    <?php  if (empty($_GET)) { ?>
+            <div id="Start">
+                <ul>
+                    <li><a class="urls" href="index.php?choosepokemon">Spélén</a></li>
+                    <li><a class="urls" href="https://github.com/99062653/POKEBATTLE" target="_blank">Github</a></li>
+                </ul>
+            </div>
+        <?php } elseif (isset($_GET["choosepokemon"])) { ?>
             <div id="Choose">
                 <header>
-                    <span>Kies je PoKéMoN</span>
                     <a id="BackButton" class="urls" href="index.php">Terug</a>
+                    <span>Kies je PoKéMoN</span>
+                    <a id="NewButton" class="urls" href="index.php?newpokemon">Nieuw</a>
                 </header>
                 <div id="Inner-Choose">
-                    <a id="NewButton" class="urls" href="index.php?newpokemon">Nieuw</a>
                     <div id="Pokemons">
                         <?php foreach (Pokemons::$Pokemons as $Pokemon) { ?>
-                            <div class="Pokemon">
-                                <h1><?= $Pokemon->Name ?></h1>
-                                <ul>
-                                    <li><i class="fa-solid fa-heart"></i> <?= $Pokemon->Health ?></li>
-                                    <li><i class="fa-solid fa-bolt-lightning"></i> <?= $Pokemon->EnergyType ?></li>
-                                    <li><i class="fa-solid fa-burst"></i> <?= count($Pokemon->Attacks) ?> Attacks</li>
-                                </ul>
-                            </div>
+                            <a href="index.php?fightpokemon&pokemon=<?= $Pokemon->Name ?>">
+                                <div class="Pokemon">
+                                    <h1><?= $Pokemon->Name ?></h1>
+                                    <ul>
+                                        <li><i class="fa-solid fa-heart"></i> <?= $Pokemon->Health ?></li>
+                                        <li><i class="fa-solid fa-bolt-lightning"></i> <?= $Pokemon->EnergyType ?></li>
+                                        <li><i class="fa-solid fa-burst"></i> <?= count($Pokemon->Attacks) ?> Attacks</li>
+                                    </ul>
+                                </div>
+                            </a>
                         <?php } ?>
                     </div>
                 </div>
@@ -43,7 +52,7 @@ require "code/services/indexservice.php";
                 <header>
                     <span>Maak je PoKéMoN</span>
                     <a id="BackButton" class="urls" href="index.php?choosepokemon">Terug</a>
-                </header> 
+                </header>
                 <form method="POST">
                     <div id="Inner-New">
                         <div class="Input">
@@ -79,13 +88,6 @@ require "code/services/indexservice.php";
                         </div>
                     </div>
                 </form>
-            </div>
-        <?php } else { ?>
-            <div id="Start">
-                <ul>
-                    <li><a class="urls" href="index.php?choosepokemon">Spélén</a></li>
-                    <li><a class="urls" href="https://github.com/99062653/POKEBATTLE" target="_blank">Github</a></li>
-                </ul>
             </div>
         <?php } ?>
     </div>

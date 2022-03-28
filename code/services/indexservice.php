@@ -15,9 +15,9 @@ $backgrounds = array(
     "img/bg/cursed.jpg");
 $randombg = $backgrounds[array_rand($backgrounds)];
 
+//default pokemons 
+//voor Pikachu express een nieuwe class gemaakt om mijn skills te showen
 $Pikachu = new Pikachu("Pikachu", "Electric", 100, 100, array("Thunderbolt", "Quick Attack", "Thunder Shock"), array("Fire", "Water", "Electric"), array("Fighting", "Flying", "Ground"), "img/pokemon/pikachu.png");
 $Charmender = new Pokemon("Charmender", "Fire", 100, 100, array("Ember", "Fire Spin"), array("Water", "Grass", "Fire"), array("Fighting", "Flying", "Ground"), "img/pokemon/charmender.png");
 $Bulbasaur = new Pokemon("Bulbasaur", "Grass", 100, 100, array("Vine Whip", "Razor Leaf"), array("Fire", "Water", "Electric"), array("Fighting", "Flying", "Ground"), "img/pokemon/bulbasaur.png");
-
-$Pokemons[] = $Pikachu;
-$Pokemons[] = $Charmender;
+$Snorlax = new Pokemon("Snorlax", "Normal", 100, 100, array("Headbutt", "Hyper Beam"), array("Fire", "Water", "Electric"), array("Fighting", "Flying", "Ground"), "img/pokemon/snorlax.png");
