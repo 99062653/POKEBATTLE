@@ -8,6 +8,8 @@ $backgrounds = array(
     "img/coast.jpg",
     "img/forest.jpg",
     "img/glacier.jpg",
-    "img/volcano.jpg"
+    "img/volcano.jpg",
+    "img/cursed.jpg"
 );
+
 $randombg = $backgrounds[array_rand($backgrounds)];
