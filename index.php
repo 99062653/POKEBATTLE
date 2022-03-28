@@ -1,7 +1,6 @@
 <?php
 require "code/services/indexservice.php";
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +32,7 @@ require "code/services/indexservice.php";
                 <div id="Inner-Choose">
                     <div id="Pokemons">
                         <?php foreach (Pokemons::$Pokemons as $Pokemon) { ?>
-                            <a href="index.php?fightpokemon&pokemon=<?= $Pokemon->Name ?>">
+                            <a href="index.php?fightpokemon&chosenpokemon=<?= $Pokemon->Name ?>">
                                 <div class="Pokemon">
                                     <h1><?= $Pokemon->Name ?></h1>
                                     <ul>
@@ -57,31 +56,43 @@ require "code/services/indexservice.php";
                     <div id="Inner-New">
                         <div class="Input">
                             <label for="Name">Naam</label>
-                            <input type="text" name="Name" placeholder="Naam">
+                            <input required type="text" name="Name" placeholder="Naam">
                         </div>
                         <div class="Input">
                             <label for="EnergyType">Energie</label>
-                            <input type="text" name="EnergyType" placeholder="Energie">
+                            <select name="EnergyType">
+                                <?php foreach (Pokemons::$EnergyTypes as $EnergyType) { ?>
+                                    <option value="<?= $EnergyType ?>"><?= $EnergyType ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
                         <div class="Input">
                             <label for="Health">Health</label>
-                            <input type="text" name="Health" placeholder="Health">
+                            <input required type="number" max="80" name="Health" placeholder="Health">
                         </div>
                         <div class="Input">
                             <label for="Attacks">Attacks</label>
-                            <input type="text" name="Attacks" placeholder="Attacks">
+                            <input required type="text" name="Attacks" placeholder="Attacks"><input required type="number" max="50" style="width: 50px;" name="AttackDamage" placeholder="0">
                         </div>
                         <div class="Input">
                             <label for="Weakness">Weakness</label>
-                            <input type="text" name="Weakness" placeholder="Weakness">
+                            <select name="Weakness">
+                                <?php foreach (Pokemons::$EnergyTypes as $EnergyType) { ?>
+                                    <option value="<?= $EnergyType ?>"><?= $EnergyType ?></option>
+                                <?php } ?>
+                            </select><input required type="number" style="width: 50px;" name="WeaknessModifier" placeholder="0">
                         </div>
                         <div class="Input">
                             <label for="Resistance">Resistance</label>
-                            <input type="text" name="Resistance" placeholder="Resistance">
+                            <select name="Resistance">
+                                <?php foreach (Pokemons::$EnergyTypes as $EnergyType) { ?>
+                                    <option value="<?= $EnergyType ?>"><?= $EnergyType ?></option>
+                                <?php } ?>
+                            </select><input required type="number" style="width: 50px;" name="ResistanceModifier" placeholder="0">
                         </div>
                         <div class="Input">
                             <label for="Image">Image</label>
-                            <input type="text" name="Image" placeholder="Image">
+                            <input required type="text" name="Image" placeholder="Image (url)">
                         </div>
                         <div class="Input">
                             <input type="submit" value="Maak">
