@@ -1,15 +1,17 @@
 <?php
 
-class Pokemon {
+class Pokemon
+{
     public $Name;
     public $EnergyType;
     public $HitPoints;
     public $Health;
     public $Attacks = array();
-    public $Weakness;
-    public $Resistance;
+    public $Weakness = array();
+    public $Resistance = array();
+    public $Image;
 
-    function __construct($name, $energytype, $hitpoints, $health, $attacks, $weakness, $resistance) 
+    public function __construct($name, $energytype, $hitpoints, $health, $attacks, $weakness, $resistance, $image)
     {
         $this->Name = $name;
         $this->EnergyType = $energytype;
@@ -18,6 +20,6 @@ class Pokemon {
         $this->Attacks = $attacks;
         $this->Weakness = $weakness;
         $this->Resistance = $resistance;
+        $this->Image = $image;
     }
-    
 }

@@ -11,14 +11,92 @@ body {
     background-repeat: no-repeat;
 }
 
-#buttons {
+#Start, #Choose, #New {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    border: 2.5px solid #c7a008;
+    box-shadow: 10px 10px 5px #000000;
+} 
+
+#Start {
+    top: 35vh;
+    width: 200px;
+    height: 200px;
+    border-radius: 15%;
+}
+
+#Choose {
+    top: 18.5vh;
+    width: 75vw;
+    height: 75vh;
+}
+
+#New {
+    top: 18.5vh;
+    width: 75vw;
+    height: 75vh;
+}
+
+#BackButton {
+    position: relative;
+    left: -40vw;
+    font-size: 25px;
+}
+
+#NewButton {
     float: right;
-    margin-right: 25px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+#Pokemons {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    border-bottom: 1.5px solid #c7a008;
+}
+
+header > span {
+    font-size: 25px;
+    color: #ffcb05;
+    -webkit-text-stroke: 1px #2a75bb;
+}
+
+label {
+    color: #ffcb05;
+    -webkit-text-stroke: 1px #2a75bb;
+    font-size: 17.5px;
 }
 
 .urls {
     text-decoration: none;
-    -webkit-text-stroke: 2px #2a75bb;
+    font-size: 35px;
     color: #ffcb05;
-    font-size: 40px;
+    -webkit-text-stroke: 1px #2a75bb;
+    cursor: pointer;
+}
+
+.urls:hover {
+    color: #2a75bb;
+    -webkit-text-stroke: 1px #ffcb05;
+}
+
+.Pokemon {
+    border: 1.5px solid #c7a008;
+}
+
+.Pokemon > h1 {
+    font-size: 25px;
+    color: #ffcb05;
+    -webkit-text-stroke: 1px #2a75bb;
 }
