@@ -70,9 +70,11 @@ require "code/services/indexservice.php";
                             <label for="Health">Health</label>
                             <input required type="number" max="80" name="Health" placeholder="Health">
                         </div>
-                        <div class="Input">
+                        <div id="Attacks" class="Input">
                             <label for="Attacks">Attacks</label>
-                            <input required type="text" name="Attacks" placeholder="Attacks"><input required type="number" max="50" style="width: 50px;" name="AttackDamage" placeholder="0">
+                            <input required type="text" name="Attacks" placeholder="Attacks">
+                            <input required type="number" max="50" style="width: 50px;" name="AttackDamage" placeholder="0">
+                            <button onclick="addInput('Attacks')">+</button>
                         </div>
                         <div class="Input">
                             <label for="Weakness">Weakness</label>
@@ -80,7 +82,8 @@ require "code/services/indexservice.php";
                                 <?php foreach (Pokemons::$EnergyTypes as $EnergyType) { ?>
                                     <option value="<?= $EnergyType ?>"><?= $EnergyType ?></option>
                                 <?php } ?>
-                            </select><input required type="number" style="width: 50px;" name="WeaknessModifier" placeholder="0">
+                            </select>
+                            <input required type="number" style="width: 50px;" name="WeaknessModifier" placeholder="0">
                         </div>
                         <div class="Input">
                             <label for="Resistance">Resistance</label>
@@ -88,14 +91,15 @@ require "code/services/indexservice.php";
                                 <?php foreach (Pokemons::$EnergyTypes as $EnergyType) { ?>
                                     <option value="<?= $EnergyType ?>"><?= $EnergyType ?></option>
                                 <?php } ?>
-                            </select><input required type="number" style="width: 50px;" name="ResistanceModifier" placeholder="0">
+                            </select>
+                            <input required type="number" style="width: 50px;" name="ResistanceModifier" placeholder="0">
                         </div>
                         <div class="Input">
                             <label for="Image">Image</label>
                             <input required type="text" name="Image" placeholder="Image (url)">
                         </div>
                         <div class="Input">
-                            <input type="submit" value="Maak">
+                            <input class="urls" type="submit" value="Maak">
                         </div>
                     </div>
                 </form>
@@ -103,4 +107,5 @@ require "code/services/indexservice.php";
         <?php } ?>
     </div>
 </body>
+<script src="js/index.js"></script>
 </html>
