@@ -11,14 +11,16 @@ body {
     background-repeat: no-repeat;
 }
 
-#Start, #Choose, #New {
+#Start,
+#Choose,
+#New {
     position: relative;
     margin: 0 auto;
     text-align: center;
     background-color: white;
     border: 2.5px solid #c7a008;
     box-shadow: 10px 10px 5px #000000;
-} 
+}
 
 #Start {
     top: 35vh;
@@ -66,7 +68,7 @@ header {
     border-bottom: 1.5px solid #c7a008;
 }
 
-header > span {
+header>span {
     font-size: 25px;
     color: #ffcb05;
     -webkit-text-stroke: 1px #2a75bb;
@@ -95,8 +97,20 @@ label {
     border: 1.5px solid #c7a008;
 }
 
-.Pokemon > h1 {
+.Pokemon:hover {
+    background-color: #c7a008;
+    cursor: pointer;
+}
+
+.Pokemon>h1 {
     font-size: 25px;
     color: #ffcb05;
     -webkit-text-stroke: 1px #2a75bb;
+}
+
+.Fill-Pokemon {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
 }

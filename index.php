@@ -25,11 +25,13 @@ require "code/services/indexservice.php";
                 <div id="Inner-Choose">
                     <a id="NewButton" class="urls" href="index.php?newpokemon">Nieuw</a>
                     <div id="Pokemons">
-                        <?php foreach ($Pokemons as $Pokemon) { ?>
+                        <?php foreach (Pokemons::$Pokemons as $Pokemon) { ?>
                             <div class="Pokemon">
                                 <h1><?= $Pokemon->Name ?></h1>
                                 <ul>
-                                    <li><i class="fa-solid fa-bolt"></i></li>
+                                    <li><i class="fa-solid fa-heart"></i> <?= $Pokemon->Health ?></li>
+                                    <li><i class="fa-solid fa-bolt-lightning"></i> <?= $Pokemon->EnergyType ?></li>
+                                    <li><i class="fa-solid fa-burst"></i> <?= count($Pokemon->Attacks) ?> Attacks</li>
                                 </ul>
                             </div>
                         <?php } ?>

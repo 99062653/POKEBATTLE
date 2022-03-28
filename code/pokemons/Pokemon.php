@@ -1,6 +1,6 @@
 <?php
 
-class Pokemon
+class Pokemon extends Pokemons
 {
     public $Name;
     public $EnergyType;
@@ -21,5 +21,7 @@ class Pokemon
         $this->Weakness = $weakness;
         $this->Resistance = $resistance;
         $this->Image = $image;
+
+        array_push(Pokemons::$Pokemons, $this);
     }
 }
