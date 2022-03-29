@@ -22,6 +22,6 @@ class Pokemon extends Pokemons
         $this->Resistance = $resistance;
         $this->Image = $image;
 
-        array_push(Pokemons::$Pokemons, $this);
+        $this->addPopulation($this);
     }
 }

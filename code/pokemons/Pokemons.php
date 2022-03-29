@@ -21,23 +21,14 @@ class Pokemons {
         "Rock",
         "Steel",
         "Water");
-    
-    public static function getPokemonbyName($name)
+
+    public function getPopulation()
     {
-        foreach (Pokemons::$Pokemons as $Pokemon) {
-            if ($Pokemon->Name == $name) {
-                return $Pokemon;
-            }
-        }
-    }
-    
-    public static function getPopulation()
-    {
-        return count(Pokemons::$Pokemons);
+        return count(self::$Pokemons);
     }
 
-    public static function getRandomPokemon() {
-        $randomPokemon = Pokemons::$Pokemons[rand(0, count(Pokemons::$Pokemons) - 1)];
-        return $randomPokemon;
+    public function addPopulation($pokemon)
+    {
+        array_push(self::$Pokemons, $pokemon);
     }
 }
