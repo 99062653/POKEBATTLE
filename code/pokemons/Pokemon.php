@@ -11,11 +11,11 @@ class Pokemon extends Pokemons
     public $Resistance = array();
     public $Image;
 
-    public function __construct($name, $energytype, $hitpoints, $health, $attacks, $weakness, $resistance, $image)
+    public function __construct($name, $energytype, $health, $attacks, $weakness, $resistance, $image)
     {
         $this->Name = $name;
         $this->EnergyType = $energytype;
-        $this->HitPoints = $hitpoints;
+        $this->HitPoints = $health;
         $this->Health = $health;
         $this->Attacks = $attacks;
         $this->Weakness = $weakness;
@@ -23,5 +23,10 @@ class Pokemon extends Pokemons
         $this->Image = $image;
 
         $this->addPopulation($this);
+    }
+
+    public function attackPokemon($enemypokemon, $attackdamage)
+    {
+        $enemypokemon->HitPoints - $attackdamage;
     }
 }

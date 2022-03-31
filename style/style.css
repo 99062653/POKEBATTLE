@@ -14,7 +14,7 @@ body {
 #Start,
 #Choose,
 #New,
-#Battle {
+#Attacks {
     position: relative;
     margin: 0 auto;
     text-align: center;
@@ -57,7 +57,34 @@ body {
 }
 
 #FriendlyPokemon, #EnemyPokemon {
+    position: relative;
+    margin: 15px;
+    text-align: center;
+}
+
+#FriendlyPokemon {
+    top: 47.5vh;
+    float: left;
+}
+
+#EnemyPokemon {
+    float: right;
+}
+
+#Visuals {
     
+}
+
+#Attacks {
+    position: relative;
+    text-align: center;
+    width: 25vw;
+    top: 70vh;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -88,6 +115,15 @@ label {
     font-size: 17.5px;
 }
 
+button {
+    cursor: pointer;
+    font-family: 'Pokemon Solid', sans-serif;
+    border: 0;
+    background-color: #ffffff;
+    border-bottom: 1.5px solid #c7a008;
+    margin: 5px;
+}
+
 .urls {
     text-decoration: none;
     font-size: 35px;
@@ -116,4 +152,23 @@ label {
 
 .Pokemon>ul>li {
     color: #000000;
+}
+
+.PokemonImg {
+    width: 20vw;
+    height: 40vh;
+}
+
+.PokemonHealth {
+    background-color: #ffffff;
+    border: 2.5px solid #c7a008;
+    box-shadow: 10px 10px 5px #000000;
+}
+
+.dangerous {
+    color: #ff2929;
+}
+
+.superdangerous {
+    color: #930404;
 }
