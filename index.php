@@ -25,8 +25,10 @@ require "code/services/indexservice.php";
         <?php } elseif (isset($_GET["newpokemon"])) { 
             include "imports/new.php";    
         ?>
-            
-        <?php } ?>
+
+        <?php } elseif (isset($_GET["fightpokemon"])) { 
+            include "imports/battle.php";
+        } ?>
     </div>
 </body>
 <script src="js/index.js"></script>

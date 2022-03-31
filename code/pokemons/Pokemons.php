@@ -31,4 +31,13 @@ class Pokemons {
     {
         array_push(self::$Pokemons, $pokemon);
     }
+
+    public function getPokemonByName($name)
+    {
+        foreach (self::$Pokemons as $Pokemon) {
+            if ($Pokemon->Name == $name) {
+                return $Pokemon;
+            }
+        }
+    }
 }
