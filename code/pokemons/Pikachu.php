@@ -1,6 +1,4 @@
 <?php 
-require_once "Pokemon.php";
-
 class Pikachu extends Pokemon {
-    
+    //eigenlijk is dit overkill
 }

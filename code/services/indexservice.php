@@ -17,5 +17,6 @@ function loadRandomBG() {
     return $randombg;
 }
 
-// $FriendlyPokemon = $AllPokemons->getPokemonByName($_GET["chosenpokemon"]);
-// $EnemyPokemon = $AllPokemons->getPokemonByName($_GET["enemypokemon"]);
+$yourTurn = true;
+$FriendlyPokemon = $AllPokemons->getPokemonByName($_GET["chosenpokemon"]);
+$EnemyPokemon = $AllPokemons->getPokemonByName($_GET["enemypokemon"]);
