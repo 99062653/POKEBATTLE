@@ -6,25 +6,25 @@
     </header>
     <div id="Inner-Choose">
         <div id="Pokemons">
-            <?php foreach (Pokemons::$Pokemons as $Pokemon) { 
-                if (isset($_GET["chosenpokemon"])) {
-                    if ($_GET["chosenpokemon"] == $Pokemon->Name) { ?>
-                        <a onclick="alert('Je hebt deze pokemon al gekozen.')" href="#">
-                    <?php } else { ?>
+            <?php foreach (Pokemons::$Pokemons as $Pokemon) { ?>
+                <?php if (isset($_GET["chosenpokemon"])) { ?>
+                    <?php if ($_GET["chosenpokemon"] != $Pokemon->Name) { ?>
                         <a href="index.php?fightpokemon&chosenpokemon=<?= $_GET["chosenpokemon"] ?>&enemypokemon=<?= $Pokemon->Name ?>">
+                    <?php } else { ?>
+                        <a onclick="alert('Je hebt deze pokemon al gekozen.')">
                     <?php } ?>
-            <?php } else { ?>
-                <a href="index.php?choosepokemon&chosenpokemon=<?= $Pokemon->Name ?>">
-            <?php } ?>
-                    <div class="Pokemon">
-                        <h1><?= $Pokemon->Name ?></h1>
-                        <ul>
-                            <li><i class="fa-solid fa-heart"></i> <?= $Pokemon->Health ?></li>
-                            <li><i class="fa-solid fa-bolt-lightning"></i> <?= $Pokemon->EnergyType ?></li>
-                            <li><i class="fa-solid fa-burst"></i> <?= count($Pokemon->Attacks) ?> Attacks</li>
-                        </ul>
-                    </div>
-                </a>
+                <?php } else { ?>
+                    <a href="index.php?choosepokemon&chosenpokemon=<?= $Pokemon->Name ?>">
+                <?php } ?>
+                        <div class="Pokemon">
+                            <h1><?= $Pokemon->Name ?></h1>
+                            <ul>
+                                <li><i class="fa-solid fa-heart"></i> <?= $Pokemon->Health ?></li>
+                                <li><i class="fa-solid fa-bolt-lightning"></i> <?= $Pokemon->EnergyType ?></li>
+                                <li><i class="fa-solid fa-burst"></i> <?= count($Pokemon->Attacks) ?> Attacks</li>
+                            </ul>
+                        </div>
+                    </a>
             <?php } ?>
         </div>
     </div>

@@ -15,9 +15,6 @@ require "code/services/battleservice.php";
             <p><?= $EnemyPokemon->Name ?>: <i class="fa-solid fa-heart"></i> <?= $EnemyPokemon->HitPoints ?> / <?= $EnemyPokemon->Health ?></p>
         </div>
     </div>
-    <div id="Visuals">
-
-    </div>
     <div id="Attacks">
         <?php foreach ($FriendlyPokemon->Attacks as $Attack => $AttackDamage) { ?>
             <div class="Attack">

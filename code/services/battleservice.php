@@ -6,5 +6,4 @@ $yourTurn = true;
 
 if (isset($_POST["Action"])) {
     $FriendlyPokemon->attackPokemon($EnemyPokemon, $_POST["Attack"]);
-    $yourTurn = false;
 }
