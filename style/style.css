@@ -124,6 +124,10 @@ button {
     margin: 5px;
 }
 
+button:disabled {
+    cursor: not-allowed;
+}
+
 .urls {
     text-decoration: none;
     font-size: 35px;

@@ -8,8 +8,11 @@
         <div id="Pokemons">
             <?php foreach (Pokemons::$Pokemons as $Pokemon) { 
                 if (isset($_GET["chosenpokemon"])) {
-            ?>
-                <a href="index.php?fightpokemon&chosenpokemon=<?= $_GET["chosenpokemon"] ?>&enemypokemon=<?= $Pokemon->Name ?>">
+                    if ($_GET["chosenpokemon"] == $Pokemon->Name) { ?>
+                        <a onclick="alert('Je hebt deze pokemon al gekozen.')" href="#">
+                    <?php } else { ?>
+                        <a href="index.php?fightpokemon&chosenpokemon=<?= $_GET["chosenpokemon"] ?>&enemypokemon=<?= $Pokemon->Name ?>">
+                    <?php } ?>
             <?php } else { ?>
                 <a href="index.php?choosepokemon&chosenpokemon=<?= $Pokemon->Name ?>">
             <?php } ?>
