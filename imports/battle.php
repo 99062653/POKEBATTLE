@@ -1,7 +1,3 @@
-<?php
-require "code/services/battleservice.php";
-?>
-
 <div id="Battle">
     <div id="FriendlyPokemon">
         <img class="PokemonImg" src="<?= $FriendlyPokemon->Image ?>" alt="<?= $FriendlyPokemon->Name ?>">

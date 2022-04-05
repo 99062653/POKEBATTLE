@@ -14,7 +14,7 @@ require "code/services/indexservice.php";
     <title>PoKéBattle</title>
 </head>
 <body>
-    <div id="Main" style="background-image: url(<?= $randombg ?>);">
+    <div id="Main" style="background-image: url(<?= loadRandomBG() ?>);">
         <?php
         if (isset($_GET["page"])) {
             switch ($_GET["page"]) {
@@ -33,7 +33,6 @@ require "code/services/indexservice.php";
         } else {
             require "imports/start.php";
         }
-        
         ?>
     </div>
 </body>
