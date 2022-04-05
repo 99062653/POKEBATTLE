@@ -21,11 +21,11 @@
                 <label for="Health">Health</label>
                 <input required type="number" max="80" name="Health" placeholder="Health">
             </div>
-            <div id="Attacks" class="Input">
+            <div class="Input">
                 <label for="Attacks">Attacks</label>
                 <input required type="text" name="Attacks" placeholder="Attacks">
                 <input required type="number" max="50" style="width: 50px;" name="AttackDamage" placeholder="0">
-                <button onclick="addInput('Attacks')">+</button>
+                <a class="urls" onclick="addInput('Attacks')">+</a>
             </div>
             <div class="Input">
                 <label for="Weakness">Weakness</label>

@@ -23,7 +23,7 @@ require "code/services/indexservice.php";
                     break;
 
                 case "newpokemon":
-                    require "imports/newpokemon.php";
+                    require "imports/new.php";
                     break;
 
                 case "fightpokemon":
