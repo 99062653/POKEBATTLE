@@ -15,20 +15,26 @@ require "code/services/indexservice.php";
 </head>
 <body>
     <div id="Main" style="background-image: url(<?= $randombg ?>);">
-        <?php if (empty($_GET)) {
-            include "imports/start.php";
-        ?>
-        <?php } elseif (isset($_GET["choosepokemon"])) { 
-            include "imports/choose.php";
-        ?>
-            
-        <?php } elseif (isset($_GET["newpokemon"])) { 
-            include "imports/new.php";    
-        ?>
+        <?php
+        if (isset($_GET["page"])) {
+            switch ($_GET["page"]) {
+                case "choosepokemon":
+                    require "imports/choose.php";
+                    break;
 
-        <?php } elseif (isset($_GET["fightpokemon"])) { 
-            include "imports/battle.php";
-        } ?>
+                case "newpokemon":
+                    require "imports/newpokemon.php";
+                    break;
+
+                case "fightpokemon":
+                    require "imports/battle.php";
+                    break;
+            }
+        } else {
+            require "imports/start.php";
+        }
+        
+        ?>
     </div>
 </body>
 <script src="js/index.js"></script>

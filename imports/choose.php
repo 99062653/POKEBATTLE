@@ -2,19 +2,19 @@
     <header>
         <a id="BackButton" class="urls" href="index.php">Terug</a>
         <span>Kies je PoKéMoN</span>
-        <a id="NewButton" class="urls" href="index.php?newpokemon">Nieuw</a>
+        <a id="NewButton" class="urls" href="index.php?page=newpokemon">Nieuw</a>
     </header>
     <div id="Inner-Choose">
         <div id="Pokemons">
             <?php foreach (Pokemons::$Pokemons as $Pokemon) { ?>
                 <?php if (isset($_GET["chosenpokemon"])) { ?>
                     <?php if ($_GET["chosenpokemon"] != $Pokemon->Name) { ?>
-                        <a href="index.php?fightpokemon&chosenpokemon=<?= $_GET["chosenpokemon"] ?>&enemypokemon=<?= $Pokemon->Name ?>">
+                        <a href="index.php?page=fightpokemon&chosenpokemon=<?= $_GET["chosenpokemon"] ?>&enemypokemon=<?= $Pokemon->Name ?>">
                     <?php } else { ?>
                         <a onclick="alert('Je hebt deze pokemon al gekozen.')">
                     <?php } ?>
                 <?php } else { ?>
-                    <a href="index.php?choosepokemon&chosenpokemon=<?= $Pokemon->Name ?>">
+                    <a href="index.php?page=choosepokemon&chosenpokemon=<?= $Pokemon->Name ?>">
                 <?php } ?>
                         <div class="Pokemon">
                             <h1><?= $Pokemon->Name ?></h1>
