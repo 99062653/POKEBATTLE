@@ -1,12 +1,20 @@
+<?php
+$fightStarted = true;
+?>
 <div id="Battle">
+    <a style="float: right; top: 90vh; right: 5vw;" id="BackButton" class="urls" href="index.php?choosepokemon">Cancel Battle</a>
     <div id="FriendlyPokemon">
-        <img class="PokemonImg" src="<?= $FriendlyPokemon->Image ?>" alt="<?= $FriendlyPokemon->Name ?>">
+        <div>
+            <img class="PokemonImg" src="<?= $FriendlyPokemon->Image ?>" alt="<?= $FriendlyPokemon->Name ?>">
+        </div>
         <div class="PokemonHealth">
             <p><?= $FriendlyPokemon->Name ?>: <i class="fa-solid fa-heart"></i> <?= $FriendlyPokemon->HitPoints ?> / <?= $FriendlyPokemon->Health ?></p>
         </div>
     </div>
     <div id="EnemyPokemon">
-        <img class="PokemonImg" src="<?= $EnemyPokemon->Image ?>" alt="<?= $EnemyPokemon->Name ?>">
+        <div>
+            <img class="PokemonImg" src="<?= $EnemyPokemon->Image ?>" alt="<?= $EnemyPokemon->Name ?>">
+        </div>
         <div class="PokemonHealth">
             <p><?= $EnemyPokemon->Name ?>: <i class="fa-solid fa-heart"></i> <?= $EnemyPokemon->HitPoints ?> / <?= $EnemyPokemon->Health ?></p>
         </div>
