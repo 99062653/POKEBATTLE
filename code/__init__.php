@@ -6,7 +6,6 @@ require "code/pokemons/Pikachu.php";
 //default pokemons 
 //voor Pikachu express een nieuwe class gemaakt om mijn skills te showen
 $Amount = 8; // aantal pokemons op de choose pagina
-shuffle(Pokemons::$Pokemons); //random pokemons
 $FriendlyStartsFirst = true;
 
 $AllPokemons = new Pokemons;

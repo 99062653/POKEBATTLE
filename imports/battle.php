@@ -1,5 +1,10 @@
 <div id="Battle">
-    <a style="float: right; top: 90vh; right: 5vw;" id="BackButton" class="urls" href="index.php?choosepokemon">Cancel Battle</a>
+    <?php if ($yourTurn) { ?>
+        <p>Het is jouw beurt</p>
+    <?php } else { ?>
+        <p>De vijand is aan de beurt</p>
+    <?php } ?>
+    <a id="CancelButton" class="urls" href="index.php?choosepokemon">Cancel Battle</a>
     <div id="FriendlyPokemon">
         <div>
             <img class="PokemonImg" src="<?= $FriendlyPokemon->Image ?>" alt="<?= $FriendlyPokemon->Name ?>">
