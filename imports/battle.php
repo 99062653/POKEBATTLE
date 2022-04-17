@@ -1,6 +1,3 @@
-<?php
-$fightStarted = true;
-?>
 <div id="Battle">
     <a style="float: right; top: 90vh; right: 5vw;" id="BackButton" class="urls" href="index.php?choosepokemon">Cancel Battle</a>
     <div id="FriendlyPokemon">

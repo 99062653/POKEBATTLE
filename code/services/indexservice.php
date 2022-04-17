@@ -1,8 +1,6 @@
 <?php
 require "code/__init__.php";
-$yourTurn = true;
-$FriendlyPokemon;
-$EnemyPokemon;
+$yourTurn = $FriendlyStartsFirst;
 
 function loadRandomBG() {
     $backgrounds = array(
@@ -15,18 +13,27 @@ function loadRandomBG() {
         "img/bg/glacier.jpg",
         "img/bg/volcano.jpg",
         "img/bg/cursed.jpg"
-    ); 
-    
-    return $backgrounds[array_rand($backgrounds)];
-}
+    );
+    $randomBG = $backgrounds[array_rand($backgrounds)];
 
-function actualBattle($friendlypokemon, $enemypokemon) {
-    
+    return $randomBG;
 }
 
 if (isset($_GET["chosenpokemon"]) && isset($_GET["enemypokemon"])) {
     $FriendlyPokemon = $AllPokemons->getPokemonByName($_GET["chosenpokemon"]);
     $EnemyPokemon = $AllPokemons->getPokemonByName($_GET["enemypokemon"]);
 
-    actualBattle($FriendlyPokemon, $EnemyPokemon);
+    actualBattle();
+}
+
+function actualBattle() {
+	global $yourTurn;
+    global $FriendlyPokemon;
+    global $EnemyPokemon;
+
+	if ($yourTurn) {
+		if (isset($_POST["Action"])) {
+            //$FriendlyPokemon.attackPokemon($EnemyPokemon, $_POST["Attack"]);
+		}
+	}
 }

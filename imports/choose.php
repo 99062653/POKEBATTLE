@@ -1,7 +1,3 @@
-<?php
-$Amount = 8;
-shuffle(Pokemons::$Pokemons); //random pokemons
-?>
 <div id="Choose">
     <header>
         <a id="BackButton" class="urls" href="index.php">Terug</a>

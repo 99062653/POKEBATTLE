@@ -1,6 +1,5 @@
 <?php
 require "code/services/indexservice.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
