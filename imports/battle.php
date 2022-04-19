@@ -1,9 +1,4 @@
 <div id="Battle">
-    <?php if ($yourTurn) { ?>
-        <p>Het is jouw beurt</p>
-    <?php } else { ?>
-        <p>De vijand is aan de beurt</p>
-    <?php } ?>
     <a id="CancelButton" class="urls" href="index.php?choosepokemon">Cancel Battle</a>
     <div id="FriendlyPokemon">
         <div>

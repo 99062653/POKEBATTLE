@@ -1,7 +1,7 @@
 <?php
 require "code/__init__.php";
+shuffle(Pokemons::$Pokemons); //random pokemons voor keuzes
 $yourTurn = $FriendlyStartsFirst;
-shuffle(Pokemons::$Pokemons); //random pokemons
 
 function loadRandomBG() {
     $backgrounds = array(
@@ -29,7 +29,6 @@ if (isset($_GET["chosenpokemon"]) && isset($_GET["enemypokemon"])) {
 
 function actualBattle($friendlypokemon, $enemypokemon) {
 	global $yourTurn;
-    $interval = 5;
 
 	if ($yourTurn) {
 		if (isset($_POST["Action"])) {
