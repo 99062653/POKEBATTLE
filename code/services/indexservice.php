@@ -1,6 +1,6 @@
 <?php
 require "code/__init__.php";
-shuffle(Pokemons::$Pokemons); //random pokemons voor keuzes
+shuffle(Pokemons::$Population); //random pokemons voor keuzes
 $yourTurn = $FriendlyStartsFirst;
 
 function loadRandomBG() {
@@ -30,15 +30,14 @@ if (isset($_GET["chosenpokemon"]) && isset($_GET["enemypokemon"])) {
 function actualBattle($friendlypokemon, $enemypokemon) {
 	global $yourTurn;
 
-	if ($yourTurn) {
-		if (isset($_POST["Action"])) {
+    if ($yourTurn) {
+        if (isset($_POST["Attack"])) {
             $friendlypokemon->attackPokemon($enemypokemon, $_POST["Attack"]);
-            $yourTurn = false;
-            $_POST = array();
-		}
-	}  
-    if (!$yourTurn) {
-        $enemypokemon->attackPokemon($friendlypokemon, $enemypokemon->Attacks[array_rand($enemypokemon->Attacks)]);
-        $yourTurn = true;
+            //unset($_POST["Attack"]);
+        }
     }
+    // if (!$yourTurn) {
+    //     $enemypokemon->attackPokemon($friendlypokemon, $enemypokemon->Attacks[array_rand($enemypokemon->Attacks)]);
+    //     $yourTurn = true;
+    // }
 }

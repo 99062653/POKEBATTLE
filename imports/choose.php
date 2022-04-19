@@ -6,7 +6,7 @@
     </header>
     <div id="Inner-Choose">
         <div id="Pokemons">
-            <?php foreach (Pokemons::$Pokemons as $Pokemon) { ?>
+            <?php foreach (Pokemons::$Population as $Pokemon) { ?>
                 <?php if (isset($_GET["chosenpokemon"])) { ?>
                     <?php if ($_GET["chosenpokemon"] != $Pokemon->Name) { ?>
                         <a href="index.php?page=fightpokemon&chosenpokemon=<?= $_GET["chosenpokemon"] ?>&enemypokemon=<?= $Pokemon->Name ?>">

@@ -1,7 +1,7 @@
 <?php 
 
 class Pokemons {
-    public static $Pokemons = array();
+    public static $Population = array();
     public static $EnergyTypes = array(
         "Bug",
         "Dark",
@@ -22,19 +22,14 @@ class Pokemons {
         "Steel",
         "Water");
 
-    public function getPopulation()
-    {
-        return count(self::$Pokemons);
-    }
-
     public function addPopulation($pokemon)
     {
-        array_push(self::$Pokemons, $pokemon);
+        array_push(self::$Population, $pokemon);
     }
 
     public function getPokemonByName($name)
     {
-        foreach (self::$Pokemons as $Pokemon) {
+        foreach (self::$Population as $Pokemon) {
             if ($Pokemon->Name == $name) {
                 return $Pokemon;
             }
