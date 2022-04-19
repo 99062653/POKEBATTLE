@@ -15,9 +15,13 @@ function loadRandomBG() {
         "img/bg/volcano.jpg",
         "img/bg/cursed.jpg"
     );
-    $randomBG = $backgrounds[array_rand($backgrounds)];
 
-    return $randomBG;
+    $randomBG = $backgrounds[array_rand($backgrounds)];
+    if (!isset($_GET["enemypokemon"])) {
+        setcookie("BG", $randomBG, time()+3600 , "/" ); // dit locked het achtergrondje
+    }
+    
+    return $_COOKIE["BG"];
 }
 
 if (isset($_GET["chosenpokemon"]) && isset($_GET["enemypokemon"])) {
