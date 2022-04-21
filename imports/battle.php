@@ -23,7 +23,7 @@
                     <?php if ($yourTurn) { ?>
                         <button type="submit" value="<?= $AttackDamage ?>" name="Attack"><i class="fa-solid fa-burst"></i> <?= $Attack ?>: <?= $AttackDamage ?></button>
                     <?php } else { ?>
-                        <button type="submit" value="<?= $AttackDamage ?>" name="Attack" disabled><i class="fa-solid fa-burst"></i> <?= $Attack ?>: <?= $AttackDamage ?></button>
+                        <button type="submit" value="NULL" name="Attack" disabled><i class="fa-solid fa-burst"></i> <?= $Attack ?>: <?= $AttackDamage ?></button>
                     <?php } ?>
                 </form>
             </div>
