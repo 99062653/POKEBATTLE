@@ -22,6 +22,10 @@ class Pokemons {
         "Steel",
         "Water");
 
+    public function getPopulation() {
+        return count(self::$Population);
+    }
+
     public function addPopulation($pokemon)
     {
         array_push(self::$Population, $pokemon);
