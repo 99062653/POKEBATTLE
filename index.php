@@ -18,6 +18,7 @@ require "code/services/indexservice.php";
         if (isset($_GET["page"])) {
             switch ($_GET["page"]) {
                 case "choosepokemon":
+                    shuffle(Pokemons::$Population);
                     require "imports/choose.php";
                     break;
 
@@ -26,6 +27,7 @@ require "code/services/indexservice.php";
                     break;
 
                 case "fightpokemon":
+                    battle();
                     require "imports/battle.php";
                     break;
             }

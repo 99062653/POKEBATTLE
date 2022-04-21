@@ -6,9 +6,10 @@ require "code/pokemons/Pikachu.php";
 //default pokemons 
 //voor Pikachu express een nieuwe class gemaakt om mijn skills te showen
 $Amount = 8; // aantal pokemons op de choose pagina
-$FriendlyStartsFirst = true;
+$FriendlyStartsFirst = true; // of de friendly pokemon de eerste aan de beurt is
+$yourTurn = $FriendlyStartsFirst; // extra variable voor duidelijkheid
 
-$AllPokemons = new Pokemons;
+$AllPokemons = new Pokemons; // pokemons class is gericht op alle pokemons terwijl de pokemon class gericht op 1 specifieke pokemon
 
 $Pikachu = new Pikachu("Pikachu", "Electric", 100, array("Thunderbolt" => 30, "Quick Attack" => 25, "Thunder Shock" => 35), array("Fire", "Water", "Electric"), array("Fighting", "Flying", "Ground"), "img/pokemon/pikachu.png");
 $Charmander = new Pokemon("Charmander", "Fire", 100, array("Ember" => 40, "Fire Spin" => 20), array("Water", "Grass", "Fire"), array("Fighting", "Flying", "Ground"), "img/pokemon/charmander.png");
