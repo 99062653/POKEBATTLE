@@ -1,5 +1,5 @@
 <div id="Battle">
-    <a id="CancelButton" class="urls" href="index.php?choosepokemon">Cancel Battle</a>
+    <a id="CancelButton" class="urls" href="index.php">Cancel Battle</a>
     <div id="FriendlyPokemon">
         <div>
             <img class="PokemonImg" src="<?= $FriendlyPokemon->Image ?>" alt="<?= $FriendlyPokemon->Name ?>">
