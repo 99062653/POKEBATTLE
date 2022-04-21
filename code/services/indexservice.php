@@ -32,16 +32,6 @@ if (isset($_GET["chosenpokemon"]) && isset($_GET["enemypokemon"])) {
 }
 
 function actualBattle($friendlypokemon, $enemypokemon) {
-	global $yourTurn;
 
-    if ($yourTurn) {
-        if (isset($_POST["Attack"])) {
-            $friendlypokemon->attackPokemon($enemypokemon, $_POST["Attack"]);
-            //unset($_POST["Attack"]);
-        }
-    }
-    // if (!$yourTurn) {
-    //     $enemypokemon->attackPokemon($friendlypokemon, $enemypokemon->Attacks[array_rand($enemypokemon->Attacks)]);
-    //     $yourTurn = true;
-    // }
 }
+
