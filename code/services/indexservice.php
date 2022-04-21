@@ -26,8 +26,14 @@ function Battle() {
     global $AllPokemons;
     global $FriendlyPokemon;
     global $EnemyPokemon;
+    global $yourTurn;
 
     $FriendlyPokemon = $AllPokemons->getPokemonByName($_GET["chosenpokemon"]);
     $EnemyPokemon = $AllPokemons->getPokemonByName($_GET["enemypokemon"]);
 
+    if ($yourTurn) {
+        if (isset($_POST["Attack"])) {
+            $FriendlyPokemon->attackPokemon($EnemyPokemon, $_POST["Attack"]);
+        }
+    }
 }
