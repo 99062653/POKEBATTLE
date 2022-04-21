@@ -22,10 +22,11 @@ function loadRandomBG() {
     return $_COOKIE["BG"];
 }
 
-function battle() {
+function Battle() {
     global $AllPokemons;
     global $FriendlyPokemon;
     global $EnemyPokemon;
+
     $FriendlyPokemon = $AllPokemons->getPokemonByName($_GET["chosenpokemon"]);
     $EnemyPokemon = $AllPokemons->getPokemonByName($_GET["enemypokemon"]);
 

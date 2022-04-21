@@ -27,7 +27,7 @@ require "code/services/indexservice.php";
                     break;
 
                 case "fightpokemon":
-                    battle();
+                    Battle();
                     require "imports/battle.php";
                     break;
             }
