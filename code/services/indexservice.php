@@ -2,7 +2,6 @@
 require "code/__init__.php";
 
 function loadRandomBG() {
-    global $BattleStarted;
     $backgrounds = array(
         "img/bg/arena.jpg",
         "img/bg/canyon.jpg",
