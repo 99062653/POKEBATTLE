@@ -1,7 +1,6 @@
 <div id="New">
     <header>
-        <script>alert("Dit is nog niet af, en misschien wordt het nooit afgemaakt ook");</script>
-        <span>Maak je PoKéMoN</span>
+        <span>Maak je PoKéMoN **(WIP)**</span>
         <a id="BackButton" class="urls" href="index.php?page=choosepokemon">Terug</a>
         <button id="NewButton" class="urls" onclick="alert('der bestaan ' + <?= $AllPokemons->getPopulation(); ?> + ' pokemons')">getPopulation</button>
     </header>
