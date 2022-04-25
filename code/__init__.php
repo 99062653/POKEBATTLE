@@ -4,6 +4,7 @@ require "code/pokemons/Pokemon.php";
 
 //default pokemons 
 //voor Pikachu express een nieuwe class gemaakt om mijn skills te showen
+$round = 1;
 $BattleStarted = false; //unused
 $Amount = 9; // aantal pokemons op de choose pagina
 $FriendlyStartsFirst = true; // of de friendly pokemon de eerste aan de beurt is

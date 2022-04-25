@@ -46,7 +46,7 @@ body {
 
 #CancelButton {
     position: relative;
-    float: right; 
+    float: right;
     top: 85vh;
     right: 4vw;
 }
@@ -63,7 +63,8 @@ body {
     grid-template-columns: auto auto auto auto;
 }
 
-#FriendlyPokemon, #EnemyPokemon {
+#FriendlyPokemon,
+#EnemyPokemon {
     position: relative;
     margin: 15px;
     text-align: center;
@@ -104,7 +105,10 @@ header {
     border-bottom: 1.5px solid #c7a008;
 }
 
-header>span, label, .urls, .Pokemon>h1 {
+header>span,
+label,
+.urls,
+.Pokemon>h1 {
     color: #ffcb05;
     -webkit-text-stroke: 1px #2a75bb;
 }
@@ -170,12 +174,4 @@ button:disabled {
     background-color: #ffffff;
     border: 2.5px solid #c7a008;
     box-shadow: 10px 10px 5px #000000;
-}
-
-.dangerous {
-    color: #ff2929;
-}
-
-.superdangerous {
-    color: #930404;
 }

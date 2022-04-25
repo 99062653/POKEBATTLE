@@ -25,7 +25,7 @@ class Pokemon extends Pokemons
         $this->addPopulation($this);
     }
 
-    public function attackPokemon($enemypokemon, $attackdamage)
+    public function Attack($enemypokemon, $attackdamage)
     {
         $enemypokemon->HitPoints = $enemypokemon->HitPoints - $attackdamage;
     }

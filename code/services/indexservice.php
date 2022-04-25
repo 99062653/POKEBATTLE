@@ -18,7 +18,7 @@ function loadRandomBG() {
     if (!$_GET || $_GET["page"] != "fightpokemon") { // !GET zodat BG werkt op de startpagina
         setcookie("BG", $randomBG, time()+3600 , "/" ); // dit locked het achtergrondje
     }
-    
+
     return $_COOKIE["BG"];
 }
 
@@ -26,14 +26,21 @@ function Battle() {
     global $AllPokemons;
     global $FriendlyPokemon;
     global $EnemyPokemon;
-    global $yourTurn;
+    global $round;
 
+    $FriendlyAttacks = [];
+    $EnemyAttacks = [];
     $FriendlyPokemon = $AllPokemons->getPokemonByName($_GET["chosenpokemon"]);
     $EnemyPokemon = $AllPokemons->getPokemonByName($_GET["enemypokemon"]);
 
-    if ($yourTurn) {
-        if (isset($_POST["Attack"])) {
-            $FriendlyPokemon->attackPokemon($EnemyPokemon, $_POST["Attack"]);
-        }
+    
+    if (isset($_POST["Attack" . $round])) {
+        $FriendlyAttacks[$round] = $_POST["Attack" . $round];
     }
+
+    foreach ($FriendlyAttacks as $Attack) {
+        $EnemyPokemon->HitPoints -= $Attack;
+    }
+
+    var_dump($_POST);
 }
