@@ -1,7 +1,6 @@
 <?php
 require "code/pokemons/pokemons.php";
 require "code/pokemons/Pokemon.php";
-require "code/pokemons/Pikachu.php";
 
 //default pokemons 
 //voor Pikachu express een nieuwe class gemaakt om mijn skills te showen
@@ -15,7 +14,7 @@ $EnemyPokemon;
 
 $AllPokemons = new Pokemons; // pokemons class is gericht op alle pokemons terwijl de pokemon class gericht op 1 specifieke pokemon
 
-$Pikachu = new Pikachu("Pikachu", "Electric", 100, array("Thunderbolt" => 30, "Quick Attack" => 25, "Thunder Shock" => 35), array("Fire", "Water", "Electric"), array("Fighting", "Flying", "Ground"), "img/pokemon/pikachu.png");
+$Pikachu = new Pokemon("Pikachu", "Electric", 100, array("Thunderbolt" => 30, "Quick Attack" => 25, "Thunder Shock" => 35), array("Fire", "Water", "Electric"), array("Fighting", "Flying", "Ground"), "img/pokemon/pikachu.png");
 $Charmander = new Pokemon("Charmander", "Fire", 100, array("Ember" => 40, "Fire Spin" => 20), array("Water", "Grass", "Fire"), array("Fighting", "Flying", "Ground"), "img/pokemon/charmander.png");
 $Bulbasaur = new Pokemon("Bulbasaur", "Grass", 100, array("Vine Whip" => 30, "Razor Leaf" => 25), array("Fire", "Water", "Electric"), array("Fighting", "Flying", "Ground"), "img/pokemon/bulbasaur.png");
 $Snorlax = new Pokemon("Snorlax", "Normal", 120, array("Headbutt" => 35, "Hyper Beam" => 50), array("Fire", "Water", "Electric"), array("Fighting", "Flying", "Ground"), "img/pokemon/snorlax.png");
