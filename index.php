@@ -10,6 +10,7 @@ require "code/services/indexservice.php";
     <link rel="stylesheet" href="style/style.css">
     <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
     <script src="https://kit.fontawesome.com/aaf588cef1.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.6.0.min.js"></script>
     <title>PoKéBattle</title>
 </head>
 <body>
