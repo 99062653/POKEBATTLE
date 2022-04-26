@@ -20,5 +20,4 @@ function moveTitle() {
     if (pos > ml) pos = 0;
     window.setTimeout("moveTitle()", speed);
 }
-
-moveTitle(); 
+moveTitle();
