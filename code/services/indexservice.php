@@ -26,19 +26,20 @@ function Battle() {
     global $AllPokemons;
     global $FriendlyPokemon;
     global $EnemyPokemon;
-    global $round;
+    global $Round;
 
     $FriendlyPokemon = $AllPokemons->getPokemonByName($_GET["chosenpokemon"]);
     $EnemyPokemon = $AllPokemons->getPokemonByName($_GET["enemypokemon"]);
     $FriendlyAttacks = [];
     $EnemyAttacks = [];
 
-    for ($i = $round; $i < $round; $i++) {
-        $FriendlyAttacks[] = $_POST["Attack".$i];
-    }
+    // for ($i = 0; $i < $Round; $i++) {
+    //     $FriendlyAttacks[] = $_POST["Attack"];
+    // }
 
-    if (isset($_POST["balls"])) {
-        var_dump($_POST);
+    if (isset($_POST["Attack"])) {
+        $FriendlyAttacks[] = $_POST["Attack"];
+        $Round++;
     }
 
     foreach ($FriendlyAttacks as $Attack) {

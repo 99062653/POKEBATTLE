@@ -20,10 +20,11 @@
         <?php foreach ($FriendlyPokemon->Attacks as $Attack => $AttackDamage) { ?>
             <div class="Attack">
                 <form method="POST">
+                    <input type="hidden" name="Round" value="<?= $Round ?>">
                     <?php if ($yourTurn) { ?>
-                        <button id="attackBtn" type="submit" value="<?= $AttackDamage ?>" name="Attack<?= $round ?>"><i class="fa-solid fa-burst"></i> <?= $Attack ?>: <?= $AttackDamage ?></button>
+                        <button id="attackBtn" type="submit" value="<?= $AttackDamage ?>" name="Attack"><i class="fa-solid fa-burst"></i> <?= $Attack ?>: <?= $AttackDamage ?></button>
                     <?php } else { ?>
-                        <button id="attackBtn" type="submit" value="NULL" name="Attack<?= $round ?>" disabled><i class="fa-solid fa-burst"></i> <?= $Attack ?>: <?= $AttackDamage ?></button>
+                        <button id="attackBtn" type="submit" value="NULL" name="Attack" disabled><i class="fa-solid fa-burst"></i> <?= $Attack ?>: <?= $AttackDamage ?></button>
                     <?php } ?>
                 </form>
             </div>
